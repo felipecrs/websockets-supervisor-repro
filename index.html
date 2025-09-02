@@ -12,7 +12,11 @@
     <button onclick="sendMessage()">Send</button>
 
     <script>
-        const ws = new WebSocket('ws://localhost/ws');
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const basePath = window.location.pathname.replace(/\/$/, '');
+        const wsUrl = protocol + '//' + window.location.host + basePath + '/ws';
+
+        const ws = new WebSocket(wsUrl);
         const messages = document.getElementById('messages');
 
         ws.onopen = () => {

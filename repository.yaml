@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: WebSocket Supervisor Reproduction add-on repository
+url: https://github.com/felipecrs/websockets-supervisor-repro
+maintainer: Felipe Santos <felipecassiors@gmail.com>
